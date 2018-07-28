@@ -1,0 +1,22 @@
+{
+  "name": "concept_creativity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dima24kmagic/creativity_one.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dima24kmagic/creativity_one/issues"
+  },
+  "homepage": "https://github.com/dima24kmagic/creativity_one#readme",
+  "devDependencies": {
+    "webpack": "^4.16.3"
+  }
+}
