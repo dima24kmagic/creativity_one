@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/dima24kmagic/creativity_one#readme",
   "devDependencies": {
-    "webpack": "^4.16.3"
+    "webpack": "^4.16.3",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.1.0"
   }
 }
