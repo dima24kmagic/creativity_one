@@ -1,9 +1,15 @@
-module.exports = {
-    mode: "development",
-    entry: {
-        filename: "./index.js"
-    },
+module.exports = env => {
+  console.log(env);
+
+  const prod = 'production';
+  const dev = 'development';
+  return {
+    mode: env.mode,
+    entry: './index',
+    watch: env.mode === prod ? false : true,
     output: {
-        filename: "./app.js"
+      path: __dirname + '/dist',
+      filename: 'app.js'
     }
-}
+  };
+};
