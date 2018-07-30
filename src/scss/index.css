@@ -3,12 +3,14 @@
   padding: 0;
   box-sizing: border-box; }
 
-body, html {
+body,
+html {
   font-size: 62.5%; }
 
 body {
   color: #fff;
-  font-size: 1rem; }
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif; }
 
 .wrapper {
   display: flex;
@@ -20,11 +22,19 @@ body {
 
 .center {
   display: flex;
+  align-items: center;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 35%;
   background: linear-gradient(to bottom, #750092, #A5004F); }
+  .center .vertical-word {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-transform: uppercase; }
 
 .circle {
   display: flex;
