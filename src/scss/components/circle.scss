@@ -1,0 +1,17 @@
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26rem;
+  height: 26rem;
+  background: linear-gradient(to bottom, #27cbff, #f3fbff);
+  box-shadow: 0 0 25px rgba(#CAEFFF, 0.51);
+  border-radius: 100%;
+  &--inner {
+    width: 40%;
+    height: 40%;
+    background: rgba(#fff, 0.95);
+    box-shadow: 0 4px 4px rgba(#000, .25);
+    border-radius: 100%;
+  }
+}

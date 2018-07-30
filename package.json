@@ -4,9 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "npm run dev",
     "webpack": "webpack",
-    "dev": "npm run webpack -- --env.mode 'development'",
-    "prod": "npm run webpack -- --env.mode 'production'"
+    "dev": "concurrently \"npm run webpack -- --env.mode development --watch\" \" sass --watch ./src/scss/index.scss:./src/scss/index.css \" ",
+    "prod": "npm run webpack -- --env.mode production"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/dima24kmagic/creativity_one#readme",
   "devDependencies": {
+    "concurrently": "^3.6.1",
     "webpack": "^4.16.3",
     "webpack-dev-server": "^3.1.5"
   },

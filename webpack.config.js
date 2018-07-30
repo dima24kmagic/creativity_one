@@ -6,7 +6,6 @@ module.exports = env => {
   return {
     mode: env.mode,
     entry: './index',
-    watch: env.mode === prod ? false : true,
     output: {
       path: __dirname + '/dist',
       filename: 'app.js'
