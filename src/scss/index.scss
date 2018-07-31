@@ -4,7 +4,11 @@
 // LAYOUT STYLES
 @import './layout/wrapper.scss';
 @import './layout/center.scss';
+@import './layout/right-side.scss';
+@import './layout/left-side.scss';
 
 //COMPONENTS
 @import './components/circle.scss';
 @import './components/vertical-word.scss';
+@import './components/nav.scss';
+@import './components/black-box.scss';
