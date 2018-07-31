@@ -32,15 +32,36 @@
       height: auto;
       margin-bottom: 18rem;
       margin-left: 14rem;
-      transform: rotate(0deg);
+      transform: rotate(45deg);
       &__square {
-        animation: tunnel-light 2s infinite;
+        cursor: pointer;
+        // animation: tunnel-light 2s infinite;
+        transition: transform 0.25s ease-out, border 0.25s;
         position: absolute;
         background: transparent;
         border: 1px solid #fff;
         width: 100%;
         height: 8rem;
         transform: rotate(45deg);
+        transform-origin: 100% 0%;
+        // &::after {
+        //   transition: height 0.25s;
+        //   content: '';
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0px;
+        //   height: 100%;
+        //   width: 1px;
+        //   background: trasparent;
+        //   box-shadow: 0px 0px 10px #fff, 0px -8px 10px #fff;
+        // }
+        &:hover {
+          // transform: scale(1.2) translate(10px, 20px) rotate(60deg);
+          transform: rotate(75deg);
+          border: 1px solid #6ab7ff;
+          box-shadow: 0 0 10px #ff008a;
+          background: linear-gradient(to right bottom, rgba(#fff, 0.15), rgba(#3eadcb, 0.25));
+        }
       }
     }
     &--door {
@@ -64,14 +85,14 @@
 @keyframes tunnel-light {
   0% {
     border: 1px solid #3eadcb;
-    transform:translateX(20px) rotate(0deg);
+    transform: translateX(20px) rotate(0deg);
   }
   50% {
     border: 1px solid #e793fc;
-    transform:translateX(-50px) rotate(0deg);
+    transform: translateX(-50px) rotate(0deg);
   }
   100% {
     border: 1px solid #3eadcb;
-    transform:translateX(20px) rotate(0deg);
+    transform: translateX(20px) rotate(0deg);
   }
 }

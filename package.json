@@ -26,6 +26,7 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
+    "gsap": "^2.0.1",
     "http-server": "^0.11.1",
     "webpack-cli": "^3.1.0"
   }
