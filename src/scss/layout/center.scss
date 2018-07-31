@@ -2,19 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     align-items: center;
     height: 100%;
     width: 35%;
-    background: linear-gradient(to bottom, #750092, #A5004F);
-
-    .vertical-word{
-        display: flex;
-        align-items: center;
-        height: 100%;
-        font-size: 3.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    .circle{
-    }
+    background: linear-gradient(to bottom, #750092, #A5004F);    
 }

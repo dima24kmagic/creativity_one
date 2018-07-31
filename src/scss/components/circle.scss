@@ -5,13 +5,25 @@
   width: 26rem;
   height: 26rem;
   background: linear-gradient(to bottom, #27cbff, #f3fbff);
-  box-shadow: 0 0 25px rgba(#CAEFFF, 0.51);
+  box-shadow: 0 0 25px rgba(#caefff, 0.51);
   border-radius: 100%;
   &--inner {
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
     width: 40%;
     height: 40%;
+    border: none;
+    outline: none;
     background: rgba(#fff, 0.95);
-    box-shadow: 0 4px 4px rgba(#000, .25);
-    border-radius: 100%;
+    box-shadow: 0 4px 4px rgba(#000, 0.25);
+    border-radius: 100%;    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 6px rgba(#000, 0.15);
+    }
+    &:active{
+      transform: translateY(0px);
+      box-shadow: 0 2px 2px rgba(#000, 0.35);
+    }
   }
 }

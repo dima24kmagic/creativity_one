@@ -7,6 +7,7 @@
     "start": "npm run dev",
     "webpack": "webpack",
     "dev": "concurrently \"npm run webpack -- --env.mode development --watch\" \" sass --watch ./src/scss/index.scss:./src/scss/index.css \" ",
+    "live-server": "cd ./src && live-server",
     "prod": "npm run webpack -- --env.mode production"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
+    "http-server": "^0.11.1",
     "webpack-cli": "^3.1.0"
   }
 }
