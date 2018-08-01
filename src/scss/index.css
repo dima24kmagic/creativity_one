@@ -8,6 +8,7 @@ html {
   font-size: 62.5%; }
 
 body {
+  overflow: hidden;
   color: #fff;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif; }
@@ -119,8 +120,10 @@ body {
   height: 26rem;
   background: linear-gradient(to bottom, #27cbff, #f3fbff);
   box-shadow: 0 0 25px rgba(202, 239, 255, 0.51);
-  border-radius: 100%; }
+  border-radius: 100%;
+  perspective: 1000px; }
   .circle--inner {
+    transition: box-shadow .15s;
     cursor: pointer;
     width: 40%;
     height: 40%;
@@ -130,7 +133,6 @@ body {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100%; }
     .circle--inner:hover {
-      transform: translateY(-2px);
       box-shadow: 0 8px 6px rgba(0, 0, 0, 0.15); }
     .circle--inner:active {
       transform: translateY(0px);
