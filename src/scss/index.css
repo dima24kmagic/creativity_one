@@ -88,6 +88,8 @@ body {
         border: 1px solid #6ab7ff;
         box-shadow: 0 0 10px #ff008a;
         background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.15), rgba(62, 173, 203, 0.25)); }
+    .challenges .challenge--tunnel .solved {
+      border: 5px solid #ff00f5; }
   .challenges .challenge--door {
     position: relative;
     width: 8rem;

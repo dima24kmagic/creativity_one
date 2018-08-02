@@ -63,6 +63,9 @@
           background: linear-gradient(to right bottom, rgba(#fff, 0.15), rgba(#3eadcb, 0.25));
         }
       }
+      .solved{
+        border: 5px solid #ff00f5;
+      }
     }
     &--door {
       position: relative;

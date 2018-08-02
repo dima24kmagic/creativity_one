@@ -14,11 +14,19 @@ export const createTunnel = (squares = 5, gapBetween = 10) => {
     //add click handler
     tunnelSquare.addEventListener('click', e => {
       tunnelSquare.clicked = !tunnelSquare.clicked;
-      console.log('tunnel square ', i, ' clicked!');
       if (tunnelSquare.clicked) {
         summ += i + 1;
         if (summ === 7) {
           console.log('square puzzle solved,  MUHFUCKA');
+          let allSquares = document.querySelectorAll('.challenge--tunnel__square');
+          for (let i = 0; i < allSquares.length; i++) {
+            allSquares[i].classList.add('solved');
+          }
+        } else {
+          let allSquares = document.querySelectorAll('.challenge--tunnel__square');
+          for (let i = 0; i < allSquares.length; i++) {
+            allSquares[i].classList.remove('solved');
+          }
         }
         e.target.style.cssText = `top: ${i * gapBetween}px;
         transform: translateX(35px) translateY(-20px) rotate(135deg);`;
@@ -27,6 +35,16 @@ export const createTunnel = (squares = 5, gapBetween = 10) => {
         summ -= i + 1;
         if (summ === 7) {
           console.log('square puzzle solved, MUHFUCKA');
+          let allSquares = document.querySelectorAll('.challenge--tunnel__square');
+          for (let i = 0; i < allSquares.length; i++) {
+            console.log(allSquares[i]);
+            allSquares[i].classList.add('solved');
+          }
+        } else {
+          let allSquares = document.querySelectorAll('.challenge--tunnel__square');
+          for (let i = 0; i < allSquares.length; i++) {
+            allSquares[i].classList.remove('solved');
+          }
         }
       }
     });
