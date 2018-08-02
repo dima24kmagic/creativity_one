@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "npm run dev",
+    "test": "concurrently \"npm run webpack -- --env.mode development --watch \" \" webpack-dev-server --env.mode development \" \" sass --watch ./src/scss/index.scss:./src/scss/index.css \" ",
     "webpack": "webpack",
     "dev": "concurrently \"npm run webpack -- --env.mode development --watch\" \" sass --watch ./src/scss/index.scss:./src/scss/index.css \" ",
     "live-server": "cd ./src && live-server",

@@ -1,10 +1,8 @@
 import { TweenLite, TimelineMax } from 'gsap';
 
-export default (element, isExpanded) => {
-  console.log(isExpanded);
-
-  if (isExpanded) {
-  } else {
+export default (element, secretKey) => {
+  if (secretKey) {
+    //Animating element if secret key was founded
     let tl = new TimelineMax();
     tl.to(element, 0.2, { transform: `translateY(-120px)` });
     tl.to(element, 0.75, { transform: `translateY(-170px) rotateX(-180deg)` });
@@ -21,6 +19,8 @@ export default (element, isExpanded) => {
       width: '100vw',
       cursor: 'auto'
     });
-    element.classList.add('circle--inner--expanded');
+  } else {
+    //Animating element if secret key not founded
+    
   }
 };
