@@ -1,4 +1,4 @@
-export const createTunnel = (squares = 5, gapBetween = 10) => {
+export const createTunnel = (squares = 5, gapBetween = 10, cb) => {
   const tunnelHolder = document.createElement('div');
   let summ = 0;
   for (let i = 0; i < squares; i++) {
@@ -21,11 +21,13 @@ export const createTunnel = (squares = 5, gapBetween = 10) => {
           let allSquares = document.querySelectorAll('.challenge--tunnel__square');
           for (let i = 0; i < allSquares.length; i++) {
             allSquares[i].classList.add('solved');
+            cb(true);
           }
         } else {
           let allSquares = document.querySelectorAll('.challenge--tunnel__square');
           for (let i = 0; i < allSquares.length; i++) {
             allSquares[i].classList.remove('solved');
+            cb(false);
           }
         }
         e.target.style.cssText = `top: ${i * gapBetween}px;
@@ -39,11 +41,13 @@ export const createTunnel = (squares = 5, gapBetween = 10) => {
           for (let i = 0; i < allSquares.length; i++) {
             console.log(allSquares[i]);
             allSquares[i].classList.add('solved');
+            cb(true);
           }
         } else {
           let allSquares = document.querySelectorAll('.challenge--tunnel__square');
           for (let i = 0; i < allSquares.length; i++) {
             allSquares[i].classList.remove('solved');
+            cb(false);
           }
         }
       }

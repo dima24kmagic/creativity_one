@@ -63,8 +63,8 @@
           background: linear-gradient(to right bottom, rgba(#fff, 0.15), rgba(#3eadcb, 0.25));
         }
       }
-      .solved{
-        border: 5px solid #ff00f5;
+      .solved {
+        animation: tunnel-solved 1.5s infinite;
       }
     }
     &--door {
@@ -82,6 +82,21 @@
         border: 1px solid #ff008a;
       }
     }
+  }
+}
+
+@keyframes tunnel-solved {
+  0% {
+    box-shadow: 0 0 10px #3eadcb;
+  }
+  20% {
+    box-shadow: 0 0 20px #e793fc;
+  }
+  60% {
+    box-shadow: 0 0 30px #6ab7ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #3eadcb;
   }
 }
 

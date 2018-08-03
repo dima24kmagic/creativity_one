@@ -9,17 +9,19 @@ verticalWord.appendChild(createVerticalWord('Find out the solution'));
 
 //Create Tunnel
 const tunnel = document.querySelector('.challenge--tunnel');
-tunnel.appendChild(createTunnel(5, 22.5));
+let secretKey = false;
+tunnel.appendChild(
+  createTunnel(5, 22.5, isSolved => {
+    secretKey = isSolved;
+  })
+);
 
 //Circle animation
 let expanded = false;
-let secretKey = false;
 let circle = document.querySelector('.circle--inner');
 circle.addEventListener('click', () => {
-  if (!expanded) {
-    checkSecret(secretKey);
+  if (!expanded && secretKey) {
     onCirclePress(circle, secretKey);
     expanded = true;
   }
 });
-

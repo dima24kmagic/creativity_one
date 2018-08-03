@@ -89,7 +89,7 @@ body {
         box-shadow: 0 0 10px #ff008a;
         background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.15), rgba(62, 173, 203, 0.25)); }
     .challenges .challenge--tunnel .solved {
-      border: 5px solid #ff00f5; }
+      animation: tunnel-solved 1.5s infinite; }
   .challenges .challenge--door {
     position: relative;
     width: 8rem;
@@ -104,6 +104,15 @@ body {
       border-radius: 100%;
       border: 1px solid #ff008a; }
 
+@keyframes tunnel-solved {
+  0% {
+    box-shadow: 0 0 10px #3eadcb; }
+  20% {
+    box-shadow: 0 0 20px #e793fc; }
+  60% {
+    box-shadow: 0 0 30px #6ab7ff; }
+  100% {
+    box-shadow: 0 0 10px #3eadcb; } }
 @keyframes tunnel-light {
   0% {
     border: 1px solid #3eadcb;
