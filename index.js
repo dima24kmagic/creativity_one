@@ -1,7 +1,7 @@
 import { createVerticalWord } from './src/js/vertical-word';
 import { createTunnel } from './src/js/tunnel';
 import onCirclePress from './src/js/center';
-import { checkSecret } from './src/js/checkSecretKey';
+import mirror from './src/js/mirror';
 
 //Create Vertical Word
 const verticalWord = document.querySelector('.vertical-word');
@@ -23,5 +23,11 @@ circle.addEventListener('click', () => {
   if (!expanded && secretKey) {
     onCirclePress(circle, secretKey);
     expanded = true;
+  } else {
+    onCirclePress(circle, secretKey);
+    expanded = false;
   }
 });
+
+//handling mirror
+mirror();
