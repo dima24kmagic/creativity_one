@@ -21,11 +21,11 @@ let expanded = false;
 let circle = document.querySelector('.circle--inner');
 circle.addEventListener('click', () => {
   if (!expanded && secretKey) {
-    onCirclePress(circle, secretKey);
-    expanded = true;
-  } else {
-    onCirclePress(circle, secretKey);
-    expanded = false;
+    onCirclePress(circle, expanded, secretKey, () => {
+      expanded = true;
+    });
+  } else if(!expanded && !secretKey){
+    onCirclePress(circle,expanded, secretKey);
   }
 });
 

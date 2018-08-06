@@ -1,8 +1,8 @@
 import { TweenLite, TimelineMax, Power0, Elastic, Power2, Power4 } from 'gsap';
 
-export default (element, secretKey) => {
-  console.log(secretKey);
-  if (secretKey) {
+export default (element, expanded, secretKey, cb) => {
+  console.log(expanded, secretKey);
+  if (!expanded && secretKey) {
     //Animating element if secret key was founded
     let tl = new TimelineMax();
     tl.to(element, 0.2, { transform: `translateY(-120px)` });
@@ -24,19 +24,25 @@ export default (element, secretKey) => {
       width: '100vw',
       cursor: 'auto'
     });
+
+    if (cb) cb()
   } else {
     //Animating element if secret key not founded
-    console.log('Show bad anim');
     let outterCircle = document.querySelector('.circle__orbit');
     let tl = new TimelineMax();
     tl.to(element, 0.45, {
       transform: `translateY(-120px)`,
-      ease: Power2.easeInOut
+      ease: Power3.easeInOut
     });
-    tl.to(outterCircle, 2.5, { rotation: '+=360_cw', ease: Power4.easeInOut });
+    tl.to(outterCircle, 2, { rotation: '+=360_cw', ease: Power2.easeInOut });
     tl.to(element, 0.45, {
       transform: `translateY(0px)`,
       ease: Power3.easeInOut
     });
+    tl.to(element, 0.1, { border: '1px solid #ff008a', transform: 'translateX(4px)' });
+    tl.to(element, 0.1, { border: '1px solid #ff008a', transform: 'translateX(-4px)' });
+    tl.to(element, 0.1, { border: '1px solid #ff008a', transform: 'translateX(4px)' });
+    tl.to(element, 0.1, { border: '1px solid #ff008a', transform: 'translateX(-4px)' });
+    tl.to(element, 0.1, { border: '0px solid white', transform: 'translateX(0px)' });
   }
 };
