@@ -2,19 +2,25 @@ import { createVerticalWord } from './src/js/vertical-word';
 import { createTunnel } from './src/js/tunnel';
 import onCirclePress from './src/js/center';
 import mirror from './src/js/mirror';
+import { navs } from './src/js/nav.animation';
 
 //Create Vertical Word
-const verticalWord = document.querySelector('.vertical-word');
-verticalWord.appendChild(createVerticalWord('Find out the solution'));
+const verticalWordContainer = document.querySelector('.vertical-word');
+
+const verticalWord = createVerticalWord('Find out the solution');
+
+verticalWordContainer.appendChild(verticalWord);
 
 //Create Tunnel
-const tunnel = document.querySelector('.challenge--tunnel');
+const tunnelContainer = document.querySelector('.challenge--tunnel');
+
 let secretKey = false;
-tunnel.appendChild(
-  createTunnel(5, 22.5, isSolved => {
-    secretKey = isSolved;
-  })
-);
+
+const tunnel = createTunnel(5, 22.5, isSolved => {
+  secretKey = isSolved;
+});
+
+tunnelContainer.appendChild(tunnel);
 
 //Circle animation
 let expanded = false;
@@ -24,10 +30,13 @@ circle.addEventListener('click', () => {
     onCirclePress(circle, expanded, secretKey, () => {
       expanded = true;
     });
-  } else if(!expanded && !secretKey){
-    onCirclePress(circle,expanded, secretKey);
+  } else if (!expanded && !secretKey) {
+    onCirclePress(circle, expanded, secretKey);
   }
 });
 
 //handling mirror
 mirror();
+
+// navigation animation
+navs();
